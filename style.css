@@ -320,6 +320,7 @@ iframe{
 .support-intro p{
     text-align: center;
     font-size: 24px;
+    padding: 10%;
 }
 .outro p{
     padding: 80px;
@@ -504,7 +505,7 @@ h3{
                  margin-bottom: 20px;
             }
 }
-@media (max-width: 350px) {
+@media (max-width: 450px) {
 
     .container {
         width: 100%;
@@ -570,5 +571,8 @@ h3{
         width: 100%;
         padding: 12px 0;
         font-size: 16px;
+    }
+    .contact .left-side{
+        font-size: 10px;
     }
 }
