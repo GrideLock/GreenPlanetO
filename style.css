@@ -275,11 +275,20 @@ h1{
 #about p{
     font-size: 1.3rem;
 }
+iframe{
+    width: 250px;
+    height: 150px;
+}
+.album-item iframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #albums .album-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 3rem;
+    margin-top: 3rem;  
 }
 .album-grid .album-item{
     background: var(--main-color);
@@ -290,6 +299,36 @@ h1{
     justify-content: center;
     border: 3px solid #8f8f96d0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#support .support-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+#support .support-item{
+    background: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+#support .support-item:hover{
+    background: var(--base-color);
+    color: white;
+}
+.support-intro p{
+    text-align: center;
+    font-size: 24px;
+}
+.outro p{
+    padding: 80px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--main-color);
+}
+h3{
+    color: var(--dark-color);
 }
 .album-grid .album-item:hover{
     transform: translateY(-5px);
@@ -302,7 +341,7 @@ h1{
 }
 #contact h3{
     color: var(--dark-color);
-    font-size: 35px;
+    font-size: 40px;
 }
 #contact .contact-upper{
     font-size: 20px;
@@ -338,7 +377,7 @@ h1{
 .content .left-side::before{
     content: '';
     position: absolute;
-    height: 85%;
+    height: 55%;
     background: var(--border-color);
     width: 4px;
     right: -15px;
@@ -464,4 +503,72 @@ h1{
                  max-width: 70%;
                  margin-bottom: 20px;
             }
+}
+@media (max-width: 350px) {
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* LEFT SIDE */
+    .container .content .left-side {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content .left-side::before {
+        display: none; /* remove vertical line */
+    }
+
+    .content .left-side i {
+        font-size: 24px;
+    }
+
+    .content .left-side .details .topic {
+        font-size: 16px;
+    }
+
+    /* RIGHT SIDE */
+    .container .content .right-side {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .content .right-side .topic-text {
+        font-size: 20px;
+    }
+
+    .content .right-side p {
+        font-size: 15px;
+    }
+
+    /* INPUTS */
+    .right-side .input-box {
+        height: auto;
+    }
+
+    .right-side .input-box input,
+    .right-side .input-box textarea {
+        width: 100%;
+        max-width: 500px;
+        font-size: 14px;
+    }
+
+    .right-side .message-box {
+        min-height: 90px;
+    }
+
+    /* BUTTON */
+    .right-side .button input[type="button"] {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
 }
